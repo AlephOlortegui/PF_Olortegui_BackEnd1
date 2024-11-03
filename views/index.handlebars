@@ -1,0 +1,12 @@
+<h1>Productos</h1>
+{{#each products}}
+    <div>
+        <h2>{{this.name}}</h2>
+        <p>{{this.description}}</p>
+        <p>Precio: {{this.price}}</p>
+        <a href="/products/{{this._id}}">Ver detalles</a>
+        <button>Agregar al carrito</button>
+    </div>
+{{/each}}
+
+{{> pagination totalPages=totalPages page=page}}
